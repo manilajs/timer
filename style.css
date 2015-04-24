@@ -172,3 +172,10 @@ div.hr {
 .hide {
   display: none;
 }
+
+::selection {
+  background: rgba(0, 0, 0, 0.1);
+}
+::-moz-selection {
+  background: rgba(0, 0, 0, 0.1);
+}
