@@ -1,12 +1,8 @@
 <!DOCTYPE html>
-<!--[if lte IE 8]><html class="ie8"><![endif]--><!--[if IE 9]><html class="ie9"><![endif]--><!--[if gt IE 9]><!-->
-<html><!--<![endif]-->
+<html>
 <head>
   <meta charset="UTF-8">
   <title></title>
-
-  <!-- CDN assets -->
-  <script>WebFontConfig={google:{families:['Electrolize:400','Lato:300,700','Montserrat:400']}},function(a,b){var c=a.createElement(b);c.src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js",c.async=1;var d=a.getElementsByTagName(b)[0];d.parentNode.insertBefore(c,d)}(document,"script")</script>
 
   <!-- Site -->
   <link href="style.css?v=829358" rel="stylesheet" type="text/css">
@@ -17,33 +13,30 @@
   <script src="script.js?v=829358"></script>
 </head>
 <body>
+<div class='cover'></div>
 <div id='all'>
 
-  <div role='message' class='message hide'>
+  <div role='message' class='message-box hide'>
+    <form role='inputform' action='.'>
+      <input value='in 15 minutes' type='text' name='q' default>
+      <span class='hint'>Try: "7:30pm" "in 20 minutes"
+    </form>
   </div>
 
   <div role='countdown_page' class='page hide'>
     <img src='http://manilajs.com/assets/manilajs-white-mono.png' class='logo'>
 
-    <textarea spellcheck='false' class='heading-1 t-stylish'>#manilajs</textarea spellcheck='false'>
-    <textarea spellcheck='false' class='heading-2 t-heading'>Let's get started!</textarea spellcheck='false'>
+    <textarea spellcheck='false' class='heading-1'>#manilajs</textarea spellcheck='false'>
+    <textarea spellcheck='false' class='heading-2'>We're glad to have you.
+Come let's join us.</textarea>
 
     <div class='hr'></div>
 
-    <textarea spellcheck='false' class='heading-3 t-sub'>We will be starting in</textarea spellcheck='false'>
+    <textarea spellcheck='false' class='heading-3'>We will be starting in</textarea spellcheck='false'>
     <div class='timer t-heading' role='timer_value'></div>
     <div class='date t-sub' role='timer_date'></div>
-    <textarea spellcheck='false' class='date t-sub heading-4'></textarea>
+    <textarea spellcheck='false' class='date heading-4'>⚡</textarea>
   </div>
-
-  <script type='text' id='samples'>
-    <p>Try these:<p>
-    <ul>
-      <li><a href='?7:15pm'>?7:15pm</a></li>
-      <li><a href='?in 20 minutes'>?in 20 minutes</a></li>
-      <li><a href='?September 2'>?September 2</a></li>
-    </ul>
-  </script>
 
 </div>
 </body>

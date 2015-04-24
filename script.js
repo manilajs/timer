@@ -40,12 +40,19 @@
     }
   };
 
+  function getSearch() {
+    var str = window.location.search || '';
+    return decodeURIComponent(str
+      .replace(/\+/g, ' ')
+      .replace(/\/$/, '')
+      .replace(/\/$/, '')
+      .replace(/^\?q=/, ''));
+  }
+
   $(function() {
     $("textarea").autoexpand();
 
-    var hash = window.location.search.match(/^\??(.*?)\/?$/)[1]
-      .replace(/(_|%20)/g, ' ')
-      .replace(/^in /, '+');
+    var hash = getSearch().replace(/^in /, '+');
     var date = Date.parse(hash);
 
     if (date) {
@@ -56,8 +63,7 @@
         date: date
       });
     } else {
-      $(".message").removeClass('hide');
-      $(".message").html($("#samples").html());
+      $("[role~='message']").removeClass('hide');
     }
   });
 
